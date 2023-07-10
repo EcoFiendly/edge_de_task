@@ -28,3 +28,15 @@ In production, I would probably use PostgreSQL instead:
     PostgreSQL supports more data types. SQLite Nly supports basics, eg no datetime, uses functions instead
     PostgresQL handles small and medium queries much better than SQLite
     PostgrSQL handles concurrency better than SQLite
+
+### Extract
+Sends a `SELECT *` query to the API
+Exits if response isn't success
+
+### Transform
+Since the data came from NHSBSA's data warehouse, it was already aggregated and conformed
+I tried to apply data modelling to the data best I could, it is challenging without the input of end users
+
+### Load
+Creates schema on SQLite db
+Loads data to output db
