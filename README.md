@@ -47,3 +47,13 @@ I selected records with postcode starting with SW17 because that's where I live
 It would be interesting to find out what is prescribed in the area
 This can contribute to formulating a care plan for SW17 which can alleviate pressures on the local practices
 Eg benefits program to improve the health of residents so they require less visits and prescription drugs
+
+### Next steps
+Automation: eg using CRON to schedule the data pull monthly
+I focused on getting a working pipeline over automating a non working pipeline
+Logging: Essential in production, for detecting anomalies during pipeline runs
+Validation: Have a PK for dupe checking when pulling new data
+Scalability: Have tools in place to handle large datasets in parallel if pipeline grows
+Appending new data: As I'm following a data warehouse and ETL process, new dat will have to be normalised before being appended to tables in db. Tables will have to be deduped after
+Research alternative methods for appending new data
+Backup: Logging should be the first line of defense against bad data being pulled, but important to have duplicate databases as backup in case the data in db gets corrupted.
