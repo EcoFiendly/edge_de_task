@@ -57,3 +57,10 @@ Scalability: Have tools in place to handle large datasets in parallel if pipelin
 Appending new data: As I'm following a data warehouse and ETL process, new dat will have to be normalised before being appended to tables in db. Tables will have to be deduped after
 Research alternative methods for appending new data
 Backup: Logging should be the first line of defense against bad data being pulled, but important to have duplicate databases as backup in case the data in db gets corrupted.
+
+### Project vs my experience working with NHS data
+My experience working with NHS data focuses more on dealing with Personal Identifiable Information (PID) and data conformation.
+Sometimes BIs would upload Personal Identifiable Information (PID).
+What I have done is to ensure PID gets discovered early, reported and deleted. And then request for a new upload of data from the clients.
+Next would be conformation. Table names, field names and datatypes (datetimes in particular).
+Due to the public data I used being from NHSBSA's data warehouse, there is no PID, and the dtypes are all right. Data is also aggregated.
