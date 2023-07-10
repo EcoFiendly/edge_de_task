@@ -20,3 +20,11 @@ Overall outline below + diagram:
 2. Transform: Apply data modelling
 3. Load: Transformed data pushed to transformed db
 4. Ready to hand over to viz/analysts
+
+### Datastore
+The dbs persist between runs via the volumn, new data will be transformed and appended to the existing
+SQLite used because it is small, quick and easy for prototyping a task
+In production, I would probably use PostgreSQL instead:
+    PostgreSQL supports more data types. SQLite Nly supports basics, eg no datetime, uses functions instead
+    PostgresQL handles small and medium queries much better than SQLite
+    PostgrSQL handles concurrency better than SQLite
