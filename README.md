@@ -40,3 +40,10 @@ I tried to apply data modelling to the data best I could, it is challenging with
 ### Load
 Creates schema on SQLite db
 Loads data to output db
+
+### Output and what I suggest could be done with it
+The output is the data stored in fact and dimension tables in the SQLite db
+I selected records with postcode starting with SW17 because that's where I live
+It would be interesting to find out what is prescribed in the area
+This can contribute to formulating a care plan for SW17 which can alleviate pressures on the local practices
+Eg benefits program to improve the health of residents so they require less visits and prescription drugs
