@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  etl:
+    build: ./etl/
+    container_name: edge-task
+    volumes:
+      - ./etl/sqlite:/etl/sqlite/
